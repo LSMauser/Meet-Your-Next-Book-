@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <div style="background-color: whitesmoke; color: black; padding: 3px; width: 60%; margin-left: 20%;">
+    <h2> Meet Your Next Book!</h2>
+    </div>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+  
+</head>
+
+
+<body>
+ 
+    <div class="boxed">
+
+
+    <form action="http://127.0.0.1:5000" method="POST">
+        <label for="Book Title">Please Enter a Book Title:</label>
+        <input type ="text" name ="Book Title"/>
+        <input type="submit" value ="submit"/>
+        
+    </form>
+
+    {% if suggestedtitle %}
+        <h2>Hmmm...I don't recognize the name of the book you entered. Did you mean {{suggestedtitle}} ?</h2>
+        <form action="http://127.0.0.1:5000/test2" method="POST">
+            <label for="Book Title2">Is this the book title you meant? Please enter 'yes' or 'no':</label>
+            <input type ="text" name ="Book Title2"/>
+            <input type="submit" value ="submit"/>
+        </form>
+    {% endif %}
+
+    {% if test_title %}
+        <h2>Meet your next book.... {{test_title}}</h2>
+        <form action="http://127.0.0.1:5000/test" method="POST">
+            <label for="Accept Book">Do you like this book? Please enter 'yes' or 'no':</label>
+            <input type ="text" name ="Accept Book"/>
+            <input type="submit" value ="submit"/></form>
+    {% endif %}
+
+
+
+    {% if test_titleS %}
+    <h2>Meet your next book.... {{test_titleS}}</h2>
+    <form action="http://127.0.0.1:5000/test3" method="POST">
+        <label for="SBook Title">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="SBook Title"/>
+        <input type="submit" value ="submit"/>
+    </form>
+{% endif %}
+  
+    {% if test_title2 %}
+    <h2> Meet your next book....{{test_title2}}</h2>
+    <form action="http://127.0.0.1:5000/test3" method="POST">
+        <label for="Book Title3">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="Book Title3"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %}
+
+    {% if message2 %}
+    <h2> {{message2}}</h2>
+    {% endif %} 
+
+    {% if test_titleS2 %}
+    <h2> Meet your next book....{{test_titleS2}}</h2>
+    <form action="http://127.0.0.1:5000/test4" method="POST">
+        <label for="SBook Title2">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="SBook Title2"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %}
+
+
+    {% if test_title3 %}
+    <h2>Meet your next book.... {{test_title3}}</h2>
+    <form action="http://127.0.0.1:5000/test4" method="POST">
+        <label for="Book Title4">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="Book Title4"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %} 
+
+    {% if test_titleS3 %}
+    <h2> Meet your next book....{{test_titleS3}}</h2>
+    <form action="http://127.0.0.1:5000/test5" method="POST">
+        <label for="SBook Title3">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="SBook Title3"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %}
+
+    {% if test_title4 %}
+    <h2>Meet your next book.... {{test_title4}}</h2>
+    <form action="http://127.0.0.1:5000/test5" method="POST">
+        <label for="Book Title5">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="Book Title5"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %} 
+
+    {% if test_titleS4 %}
+    <h2> Meet your next book....{{test_titleS4}}</h2>
+    <form action="http://127.0.0.1:5000/test6" method="POST">
+        <label for="SBook Title4">Do you like this book? Please enter 'yes' or 'no':</label>
+        <input type ="text" name ="SBook Title4"/>
+        <input type="submit" value ="submit"/>
+    </form>
+    {% endif %}
+ 
+    {% if r_message %} 
+    <h2>{{r_message}}</h2>
+    {% endif %}
+
+    {% if fmessage %}
+    <h2> {{fmessage}}</h2>
+    {% endif %} 
+
+ 
+</div>
+
+
+</body>
+ </html>
+
